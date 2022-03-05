@@ -1,0 +1,25 @@
+.card{
+    border: 1px solid blue;
+    width: 450px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+        margin: auto;
+        display: block;
+      }
+
+h6{
+    align-content: center;
+}
