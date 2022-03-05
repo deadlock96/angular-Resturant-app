@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row ">
+        <div class="col-md-12 container-row">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Resturant Sign-up</h1>
+                    <hr>
+                    <!-- <h5>Get Free Membership </h5> -->
+                </div>
+                <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                    <div class="mb-3">
+                        <label 
+                            for="exampleInputEmail1" 
+                            class="form-label">
+                            Name
+                        </label>
+
+                        <input 
+                            type="text" 
+                            formControlName="name" 
+                            class="form-control"
+                            placeholder="Enter your Name">
+                    </div>
+                    <div class="mb-3">
+                        <label 
+                            for="exampleInputEmail1" 
+                            class="form-label">
+                            Email address
+                        </label>
+                        <input 
+                            type="email" 
+                            formControlName="email" 
+                            class="form-control" 
+                            placeholder="Enter your Email"
+                            id="exampleInputEmail1" 
+                            aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="mb-3">
+                        <label 
+                            for="exampleInputEmail1" 
+                            class="form-label">
+                            Mobile / Landline No.
+                        </label>
+                        <input 
+                            type="email" 
+                            formControlName="mobile" 
+                            class="form-control"
+                            placeholder="Enter Mobile / Landline No." id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="mb-3">
+                        <label 
+                            for="exampleInputEmail1" 
+                            class="form-label">
+                            Password
+                        </label>
+                        <input 
+                            type="password" 
+                            formControlName="password" 
+                            class="form-control"
+                            placeholder="Enter Password">
+                    </div>
+
+                    <!-- <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Confirm Password</label>
+                        <input type="text" formControlName="gstno" class="form-control"
+                            placeholder="Enter Confirm Password">
+                    </div> -->
+
+                    <button 
+                        type="submit" 
+                        class="btn btn-primary">
+                        Submit
+                    </button>
+                    <hr>
+
+                </form>
+
+                <h6>Already have an Account?</h6>
+               <a routerLink = "/login"> Login</a>
+               
+            </div>
+        </div>
+    </div>
+</div>
