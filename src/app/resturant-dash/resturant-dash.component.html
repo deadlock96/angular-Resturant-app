@@ -2,8 +2,19 @@
     <div class="container-fluid">
         <h2>AUTHORITY OF HOTEL MANAGEMENT</h2>
         <div class="d-flex">
-            <button (click)="clickAddResto()" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
-                Resturant</button>
+            <button 
+                (click)="clickAddResto()" 
+                type="button" class="btn btn-success" 
+                data-bs-toggle="modal" 
+                data-bs-target="#exampleModal">
+                Add Resturant
+            </button>
+
+                <button 
+                    routerLink="/login"
+                    class="btn btn-danger mx-3">
+                    Log Out
+                </button>
         </div>
     </div>
 </nav>
@@ -13,7 +24,12 @@
     <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">Resturants Record Management</h1>
         <p class="col-md-8 fs-4">Highly Confedential Records</p>
-        <a class="btn btn-primary btn-lg" target="_blank" href="https://github.com/" type="button">Show Records</a>
+        <a 
+            class="btn btn-primary btn-lg" 
+            target="_blank" href="https://github.com/" 
+            type="button">
+            Show Records
+        </a>
     </div>
 </div>
 
@@ -42,9 +58,23 @@
             <td>{{data.location}}</td>
             <td>{{data.gstno}}</td>
             <td>
-                <button (click)="onEditResto(data)" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">Edit</button>&nbsp;
+                <button 
+                    (click)="onEditResto(data)" 
+                    type="button" 
+                    class="btn btn-success" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#exampleModal" 
+                    class="btn btn-info">
+                    Edit
+                </button>
+                &nbsp;
 
-                <button (click)="deleteResto(data)" type="button" class="btn btn-danger" >Delete</button>
+                <button 
+                    (click)="deleteResto(data)" 
+                    type="button" 
+                    class="btn btn-danger" >
+                    Delete
+                </button>
 
             </td>
         </tr>
@@ -58,67 +88,160 @@
   </button> -->
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div 
+    class="modal fade" 
+    id="exampleModal" 
+    tabindex="-1" 
+    aria-labelledby="exampleModalLabel" 
+    aria-hidden="true">
+
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Resturant Form Record</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h5 
+                    class="modal-title" 
+                    id="exampleModalLabel">
+                    Resturant Form Record
+                </h5>
+
+                <button 
+                    type="button" 
+                    class="btn-close" 
+                    data-bs-dismiss="modal" 
+                    aria-label="Close">
+                </button>
+
             </div>
+
             <div class="modal-body">
+
                 <form [formGroup]="formValue">
 
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">
+
+                        <label 
+                            for="exampleInputEmail1" 
+                            class="form-label">
                             Name of Resturant / Hotel
                         </label>
-
-                        <input type="text" formControlName="resturantName" class="form-control"
+                        <input 
+                            type="text" 
+                            formControlName="resturantName" 
+                            class="form-control"
                             placeholder="Enter your Resturant / Hotel name" id="exampleInputEmail1"
                             aria-describedby="emailHelp">
                     </div>
 
 
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">
+                        <label 
+                            for="exampleInputEmail1" 
+                            class="form-label">
                             Name of Owner
                         </label>
-
-                        <input type="text" formControlName="owner" class="form-control" placeholder="Enter Owner name"
-                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input 
+                            type="text" 
+                            formControlName="owner" 
+                            class="form-control" 
+                            placeholder="Enter Owner name"
+                            id="exampleInputEmail1" 
+                            aria-describedby="emailHelp">
                     </div>
 
 
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">
+                        <label 
+                            for="exampleInputEmail1" 
+                            class="form-label">
                             Email address
                         </label>
-
-                        <input type="email" formControlName="email" class="form-control" placeholder="Enter your Email"
-                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input 
+                            type="email" 
+                            formControlName="email" 
+                            class="form-control" 
+                            placeholder="Enter your Email"
+                            id="exampleInputEmail1" 
+                            aria-describedby="emailHelp">
                     </div>
 
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Mobile / Landline No.</label>
-                        <input type="email" formControlName="mobile" class="form-control"
+                        <label 
+                            for="exampleInputEmail1" 
+                            class="form-label">
+                            Mobile / Landline No.
+                        </label>
+                        <input 
+                            type="email" 
+                            formControlName="mobile" 
+                            class="form-control"
                             placeholder="Enter Mobile / Landline No." id="exampleInputEmail1"
                             aria-describedby="emailHelp">
                     </div>
 
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Location</label>
-                        <input type="email" formControlName="location" class="form-control"
+                        <label 
+                            for="exampleInputEmail1" 
+                            class="form-label">
+                            Location
+                        </label>
+                        <input 
+                            type="email" 
+                            formControlName="location" 
+                            class="form-control"
                             placeholder="Enter Location of Resturant / Hotel" id="exampleInputEmail1"
                             aria-describedby="emailHelp">
                     </div>
 
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">GST No.</label>
-                        <input type="text" formControlName="gstno" class="form-control" placeholder="Enter your GST No."
-                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label 
+                            for="exampleInputEmail1" 
+                            class="form-label">
+                            GST No.
+                        </label>
+                        <input 
+                            type="text" 
+                            formControlName="gstno" 
+                            class="form-control" 
+                            placeholder="Enter your GST No."
+                            id="exampleInputEmail1" 
+                            aria-describedby="emailHelp">
                     </div>
+                </form>
+            </div>
+            <div class="modal-footer">
 
-                    <!-- <div class="mb-3">
+                <button 
+                    type="button" 
+                    id="clear" 
+                    class="btn btn-warning">
+                    Clear
+                </button>
+
+                <button 
+         
+                    type="button" 
+                    class="btn btn-primary" 
+                    (click)="addResto()">
+                    Add Details
+                </button>
+
+                <button 
+          
+                    type="button" 
+                    class="btn btn-primary" 
+                    (click)="updateResto()">
+                    Update Details
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
                         <input type="password" class="form-control" placeholder="Enter your name"
                             id="exampleInputPassword1">
@@ -131,17 +254,3 @@
                     </div> -->
 
                     <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-                </form>
-            </div>
-            <div class="modal-footer">
-
-                <button type="button" id="clear" class="btn btn-warning">Clear</button>
-
-                <button *ngif="showAdd" type="button" class="btn btn-primary" (click)="addResto">Add Details</button>
-
-                <button *ngif="showbtn" type="button" class="btn btn-primary" (click)="updateResto">Update Details</button>
-
-            </div>
-        </div>
-    </div>
-</div>

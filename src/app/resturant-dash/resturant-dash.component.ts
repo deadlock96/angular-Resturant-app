@@ -34,10 +34,10 @@ export class ResturantDashComponent implements OnInit {
   clickAddResto(){
     this.formValue.reset();
     this.showAdd=true;
-    this.showbtn=false
+    this.showbtn=false;
   }
   //subscribe data
-  addResto() {
+  addResto(): void {
     this.resturantModelObj.resturantName = this.formValue.value.resturantName;
     this.resturantModelObj.owner = this.formValue.value.owner;
     this.resturantModelObj.email = this.formValue.value.email;

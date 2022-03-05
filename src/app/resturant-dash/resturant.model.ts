@@ -6,5 +6,4 @@ export class ResturantData {
     mobile: string = ''
     location: string = ''
     gstno: string = ''
-  name: any;
 }
