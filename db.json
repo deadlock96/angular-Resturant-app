@@ -49,6 +49,54 @@
       "mobile": null,
       "location": null,
       "gstno": null
+    },
+    {
+      "id": 7,
+      "resturantName": "",
+      "owner": "",
+      "email": "",
+      "mobile": "",
+      "location": "",
+      "gstno": ""
+    },
+    {
+      "id": 8,
+      "resturantName": null,
+      "owner": null,
+      "email": null,
+      "mobile": null,
+      "location": null,
+      "gstno": null
+    }
+  ],
+  "signup": [
+    {
+      "name": "Akshay",
+      "email": "ae@gmail.com",
+      "mobile": "9541230547",
+      "password": "74401asdf",
+      "id": 1
+    },
+    {
+      "name": "",
+      "email": "",
+      "mobile": "",
+      "password": "",
+      "id": 2
+    },
+    {
+      "name": "AkshayKumar",
+      "email": "ake@gmail.com",
+      "mobile": "9876543210",
+      "password": "7410",
+      "id": 3
+    },
+    {
+      "name": "abc",
+      "email": "abc@gmail.com",
+      "mobile": "7458963210",
+      "password": "abc",
+      "id": 4
     }
   ],
   "comments": [
