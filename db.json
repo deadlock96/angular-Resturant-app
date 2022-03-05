@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "resturantName": "Indian Accent",
+      "owner": "Indian Accent",
+      "email": "indainaccent.com",
+      "mobile": "9468149684126",
+      "location": "Indian Accent",
+      "gstno": "6896456104684"
+    },
+    {
+      "id": 3,
+      "resturantName": "Indian Accent",
+      "owner": "Indian Accent",
+      "email": "indainaccent.com",
+      "mobile": "56353365356",
+      "location": "Indian Accent",
+      "gstno": "56.5632635.3563"
+    },
+    {
+      "id": 4,
+      "resturantName": "taj hotel",
+      "owner": "tata",
+      "email": "tajhotel.com",
+      "mobile": "954103578",
+      "location": "mumbai",
+      "gstno": "6527525KUGU654"
+    },
+    {
+      "id": 5,
+      "resturantName": "Aadarsh Hotel",
+      "owner": "aadarsh",
+      "email": "dfvbgkdjf.com",
+      "mobile": "89414826694",
+      "location": "dfbdfgn sfbn sgf",
+      "gstno": "4786464DFHG64"
+    },
+    {
+      "id": 6,
+      "resturantName": null,
+      "owner": null,
+      "email": null,
+      "mobile": null,
+      "location": null,
+      "gstno": null
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

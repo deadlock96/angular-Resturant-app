@@ -1,0 +1,147 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h2>AUTHORITY OF HOTEL MANAGEMENT</h2>
+        <div class="d-flex">
+            <button (click)="clickAddResto()" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
+                Resturant</button>
+        </div>
+    </div>
+</nav>
+
+<!-- jumbotron starts -->
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Resturants Record Management</h1>
+        <p class="col-md-8 fs-4">Highly Confedential Records</p>
+        <a class="btn btn-primary btn-lg" target="_blank" href="https://github.com/" type="button">Show Records</a>
+    </div>
+</div>
+
+
+<!-- table starts -->
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th scope="col">Resturant ID</th>
+            <th scope="col">Resturant Name</th>
+            <th scope="col">Owner</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile / Landline No.</th>
+            <th scope="col">Location</th>
+            <th scope="col">GST No.</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of allResturantData">
+            <td>{{data.id}}</td>
+            <td>{{data.resturantName}}</td>
+            <td>{{data.owner}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.mobile}}</td>
+            <td>{{data.location}}</td>
+            <td>{{data.gstno}}</td>
+            <td>
+                <button (click)="onEditResto(data)" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">Edit</button>&nbsp;
+
+                <button (click)="deleteResto(data)" type="button" class="btn btn-danger" >Delete</button>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!-- table ends -->
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Resturant Form Record</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formValue">
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">
+                            Name of Resturant / Hotel
+                        </label>
+
+                        <input type="text" formControlName="resturantName" class="form-control"
+                            placeholder="Enter your Resturant / Hotel name" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">
+                            Name of Owner
+                        </label>
+
+                        <input type="text" formControlName="owner" class="form-control" placeholder="Enter Owner name"
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">
+                            Email address
+                        </label>
+
+                        <input type="email" formControlName="email" class="form-control" placeholder="Enter your Email"
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Mobile / Landline No.</label>
+                        <input type="email" formControlName="mobile" class="form-control"
+                            placeholder="Enter Mobile / Landline No." id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Location</label>
+                        <input type="email" formControlName="location" class="form-control"
+                            placeholder="Enter Location of Resturant / Hotel" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">GST No.</label>
+                        <input type="text" formControlName="gstno" class="form-control" placeholder="Enter your GST No."
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+
+                    <!-- <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter your name"
+                            id="exampleInputPassword1">
+                    </div> -->
+
+                    <!-- <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">I hearby declare that above information is
+                            correctly filled and is responsible for any mis-information.</label>
+                    </div> -->
+
+                    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                </form>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" id="clear" class="btn btn-warning">Clear</button>
+
+                <button *ngif="showAdd" type="button" class="btn btn-primary" (click)="addResto">Add Details</button>
+
+                <button *ngif="showbtn" type="button" class="btn btn-primary" (click)="updateResto">Update Details</button>
+
+            </div>
+        </div>
+    </div>
+</div>
